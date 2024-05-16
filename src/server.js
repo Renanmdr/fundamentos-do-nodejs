@@ -13,9 +13,9 @@ const server =  http.createServer((req, res) => {
             name: 'Joe Jr',
             email: 'joe@gmail.com'
         })
-        return res.end('Criação de usuario')
+        return res.writeHead(201).end()
     }
-return res.end('Hello world 2')
+return res.writeHead(404).end('Not found')
 })
 
 server.listen(3000)
